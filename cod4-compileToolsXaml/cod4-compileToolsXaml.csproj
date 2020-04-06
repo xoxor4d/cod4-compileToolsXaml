@@ -283,9 +283,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="shadergen.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="ICSharpCode.AvalonEdit.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

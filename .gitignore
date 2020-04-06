@@ -61,6 +61,7 @@ Temporary Items
 
 # Additional stuff
 *.zip
+pic/
 cod4-compileToolsXaml/obj/
 cod4-compileToolsXaml/cod4_root/bin/CoD4CompileTools/cod4-compileToolsXaml.*
 

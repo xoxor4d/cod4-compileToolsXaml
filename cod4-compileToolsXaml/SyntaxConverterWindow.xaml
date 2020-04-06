@@ -35,7 +35,7 @@
             Margin="10,38,10,10"
             ScrollViewer.ScrollChanged="Editor_ScrollChanged"
             Background="#FF323232" BorderBrush="#FF212121" BorderThickness="1"
-            IsReadOnly="True" Grid.Column="1" HorizontalScrollBarVisibility="Auto"/>
+            IsReadOnly="True" Grid.Column="1" HorizontalScrollBarVisibility="Auto" Foreground="#FFB6B6B6"/>
 
         <!-- Use less precision -->
         <CheckBox Style="{StaticResource CheckBox}" Template="{DynamicResource CheckBoxNew}" 
