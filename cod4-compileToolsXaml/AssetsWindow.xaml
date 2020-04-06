@@ -1,0 +1,40 @@
+﻿<Window x:Class="cod4_compileToolsXaml.AssetsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cod4_compileToolsXaml"
+        mc:Ignorable="d"
+        Title="Zone File Editor" Height="460" Width="815" MinHeight="460" MinWidth="840" WindowStartupLocation="CenterOwner" Loaded="OnZoneLoaded"
+        WindowStyle="ToolWindow">
+    <Grid Background="#FF232323">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="239"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Rectangle Fill="#FF1D1D1D" Height="22" Margin="8,10,10,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Rectangle Fill="#FF1D1D1D" Height="22" Margin="10,10,8,0" VerticalAlignment="Top" Width="221"/>
+
+
+        <Button Style="{StaticResource ToolButton}" x:Name="btnSaveLevelCSV" Click="btnSaveLevelCSVClick" Content="Save" Margin="8,0,10,10" Height="27" VerticalAlignment="Bottom" Grid.Column="1"/>
+
+        <TextBox x:Name="txtLevelCSV" Margin="8,32,10,52" Background="#FF2B2B2B" 
+                 BorderBrush="#FF1D1D1D" Foreground="#FFBDBDBD" 
+                 ScrollViewer.VerticalScrollBarVisibility="Auto" IsReadOnly="False" AcceptsReturn="True" AcceptsTab="True" FontSize="12" 
+                 IsUndoEnabled="True" SelectionBrush="#FF686868" BorderThickness="1.35" Grid.Column="1" Padding="2"/>
+
+
+        <Label Content="Missing Assets:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFAEAEAE" Height="28" Width="93"/>
+        <Label Content="Map Zone File:" HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFAEAEAE" Height="28" Width="96" Grid.Column="1"/>
+
+
+        <TextBox x:Name="txtMissingAssets" Margin="10,32,8,10" TextWrapping="Wrap" Text="" 
+                 VerticalAlignment="Stretch" Background="#FF2B2B2B" BorderBrush="#FF1D1D1D" 
+                 VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" IsReadOnly="True" 
+                 Foreground="#FFBDBDBD" SelectionBrush="#FF686868" BorderThickness="1.35" Padding="2"/>
+
+
+        <!--<Image Margin="10,19,294,64" Source="" Stretch="Fill"/> -->
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+// COD4-SHADERGEN - xoxor4d.github.io
+// # [shadergen_world_single_image.template]
+
+#include "commonsetup.template"
+
+#if "@customString@" != ""
+	techniqueSet( "@customString@" );
+#else
+    #error "<customString> cannot be empty! Define the techset (without prefix/extension) that you want to use for your material!"
+#endif
+
+textureTable
+{
+	#if "$colorMap$" != ""
+		"colorMap" = map( "@tileColor@", "@filterColor@", "$colorMap$", @nopicmipColor@ ) "@formatColor@" : "colorMap";
+	#else
+		#error "<colorMap> cannot be empty! Define a colorMapUse or use template :: [shadergen_world_no_images] instead!"
+	#endif
+}
+
+refImage( "$colorMap$" );

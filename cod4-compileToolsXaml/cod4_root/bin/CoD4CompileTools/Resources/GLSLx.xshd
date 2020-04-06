@@ -1,0 +1,359 @@
+﻿<?xml version="1.0"?>
+
+<!-- Syntax highlight definition for HLSL 2010 by Husni Che Ngah
+	this should be rewritten to xshd v2.0 syntax to handle HLSL Keywords with whitespaces properly -->
+
+<SyntaxDefinition name = "GLSLx" extensions = ".fx" xmlns="http://icsharpcode.net/sharpdevelop/syntaxdefinition/2008">
+  <Color name="MethodName"          foreground="#ddbdab"/>
+  <Color name="Digits"              foreground="#c678de"/>
+  <Color name="Character"           foreground="#bbbbbb"/>
+  <Color name="String"              foreground="#969696"/> <!-- this is punctuation -->
+  <Color name="Keywords"            foreground="#d6b07b"/>
+  <Color name="Comment"             foreground="#FF7F9F7F" fontStyle="italic"/>
+  <Color name="Preprocessor"        foreground="#e06c75"/>
+  <Color name="InputSymantics"      foreground="#C5AB74"/>
+  <Color name="SamplerTypes"        foreground="#98b755"/>
+  <Color name="Variables"           foreground="#56b6c2"/>
+  <Color name="IntrinsicFunctions"  foreground="#98b755"/>
+  <Color name="ExceptionHandling"   foreground="#d46c60"/>
+
+
+  <RuleSet ignoreCase="false">
+    <Rule color="String">
+      [:?,.;()\[\]{}+\-/%*&lt;&gt;^=~!&amp;]+
+    </Rule>
+
+    <Rule color="Keywords">
+      \w*@
+    </Rule>
+
+    <Keywords color = "Preprocessor">
+      <Word>#define</Word>
+      <Word>#elif</Word>
+      <Word>#else</Word>
+      <Word>#endif</Word>
+      <Word>#error</Word>
+      <Word>#if</Word>
+      <Word>#ifdef</Word>
+      <Word>#ifndef</Word>
+      <Word>#include</Word>
+      <Word>#line</Word>
+      <Word>#pragma</Word>
+      <Word>#undef</Word>
+      <Word>defined</Word>
+    </Keywords>
+
+    <Keywords color = "ExceptionHandling">
+      <Word>__FILE__</Word>
+      <Word>__LINE__</Word>
+      <Word>auto</Word>
+      <Word>asm</Word>
+      <Word>asm_fragment</Word>
+      <Word>blendstate</Word>
+      <Word>BOOL</Word>
+      <Word>branch</Word>
+      <Word>break</Word>
+      <Word>buffer</Word>
+      <Word>call</Word>
+      <Word>cbuffer</Word>
+      <Word>case</Word>
+      <Word>catch</Word>
+      <Word>char</Word>
+      <Word>class</Word>
+      <Word>column_major</Word>
+      <Word>compile</Word>
+      <Word>compile_fragment</Word>
+      <Word>const</Word>
+      <Word>const_cast</Word>
+      <Word>continue</Word>
+      <Word>decl</Word>
+      <Word>def</Word>
+      <Word>default</Word>
+      <Word>disable</Word>
+      <Word>discard</Word>
+      <Word>do</Word>
+      <Word>else</Word>
+      <Word>enum</Word>
+      <Word>error</Word>
+      <Word>explicit</Word>
+      <Word>extern</Word>
+      <Word>false</Word>
+      <Word>fastopt</Word>
+      <Word>flatten</Word>
+      <Word>for</Word>
+      <Word>forcecase</Word>
+      <Word>goto</Word>
+      <Word>if</Word>
+      <Word>in</Word>
+      <Word>inline</Word>
+      <Word>inout</Word>
+      <Word>interface</Word>
+      <Word>long</Word>
+      <Word>loop</Word>
+      <Word>matrix</Word>
+      <Word>mutable</Word>
+      <Word>namespace</Word>
+      <Word>new</Word>
+      <Word>once</Word>
+      <Word>operator</Word>
+      <Word>out</Word>
+      <Word>pass</Word>
+      <Word>pack_matrix</Word>
+      <Word>pixelfragment</Word>
+      <Word>pixelshader</Word>
+      <Word>precise</Word>
+      <Word>private</Word>
+      <Word>protected</Word>
+      <Word>public</Word>
+      <Word>ps</Word>
+      <Word>ps_1_1</Word>
+      <Word>ps_1_2</Word>
+      <Word>ps_1_3</Word>
+      <Word>ps_1_4</Word>
+      <Word>ps_2_0</Word>
+      <Word>ps_2_a</Word>
+      <Word>ps_3_0</Word>
+      <Word>reinterpret_cast</Word>
+      <Word>return</Word>
+      <Word>register</Word>
+      <Word>row_major</Word>
+      <Word>shared</Word>
+      <Word>short</Word>
+      <Word>signed</Word>
+      <Word>sizeof</Word>
+      <Word>snorm</Word>
+      <Word>stateblock</Word>
+      <Word>stateblock_state</Word>
+      <Word>static</Word>
+      <Word>static_cast</Word>
+      <Word>struct</Word>
+      <Word>switch</Word>
+      <Word>technique</Word>
+      <Word>technique10</Word>
+      <Word>template</Word>
+      <Word>texture</Word>
+      <Word>this</Word>
+      <Word>throw</Word>
+      <Word>true</Word>
+      <Word>try</Word>
+      <Word>typedef</Word>
+      <Word>typename</Word>
+      <Word>uniform</Word>
+      <Word>union</Word>
+      <Word>unorm</Word>
+      <Word>unroll</Word>
+      <Word>unsigned</Word>
+      <Word>using</Word>
+      <Word>vector</Word>
+      <Word>vertexshader</Word>
+      <Word>virtual</Word>
+      <Word>void</Word>
+      <Word>volatile</Word>
+      <Word>vs</Word>
+      <Word>vs_1_1</Word>
+      <Word>vs_2_0</Word>
+      <Word>vs_2_a</Word>
+      <Word>warning</Word>
+      <Word>while</Word>
+    </Keywords>
+
+    <Keywords color = "SamplerTypes">
+      <Word>sampler</Word>
+      <Word>sampler1D</Word>
+      <Word>sampler1DArray</Word>
+      <Word>sampler1DArrayShadow</Word>
+      <Word>sampler2D</Word>
+      <Word>sampler2DArray</Word>
+      <Word>sampler2DArrayShadow</Word>
+      <Word>sampler3D</Word>
+      <Word>samplerCube</Word>
+      <Word>sampler1DShadow</Word>
+      <Word>sampler2DShadow</Word>
+      <Word>samplerCubeShadow</Word>
+    </Keywords>
+
+    <Keywords color = "InputSymantics">
+      <Word>COLOR</Word>
+      <Word>COLOR0</Word>
+      <Word>COLOR1</Word>
+      <Word>COLOR2</Word>
+      <Word>COLOR3</Word>
+      <Word>COLOR4</Word>
+
+      <Word>resolution</Word>
+      <Word>time</Word>
+      <Word>mouse</Word>
+      <Word>backbuffer</Word>
+      <Word>fft</Word>
+      <Word>surfacePosition</Word>
+      <Word>iChannel0</Word>
+      <Word>iChannel1</Word>
+      
+      <Word>gl_FragData</Word>
+      <Word>gl_Position</Word>
+      <Word>gl_PointSize</Word>
+      <Word>gl_FragCoord</Word>
+      <Word>gl_FrontFacing</Word>
+      <Word>gl_PointCoord</Word>
+      <Word>gl_FragColor</Word>
+    </Keywords>
+
+    <Keywords color = "Variables">
+      <Word>bool</Word>
+      <Word>int</Word>
+      <Word>uint</Word>
+      <Word>float</Word>
+      <Word>vec1</Word>
+      <Word>vec2</Word>
+      <Word>vec3</Word>
+      <Word>vec4</Word>
+      <Word>ivec2</Word>
+      <Word>ivec3</Word>
+      <Word>ivec4</Word>
+      <Word>uvec2</Word>
+      <Word>uvec3</Word>
+      <Word>uvec4</Word>
+      <Word>bvec2</Word>
+      <Word>bvec3</Word>
+      <Word>bvec4</Word>
+      <Word>mat2x2</Word>
+      <Word>mat2x3</Word>
+      <Word>mat2x4</Word>
+      <Word>mat3x2</Word>
+      <Word>mat3x3</Word>
+      <Word>mat3x4</Word>
+      <Word>mat4x2</Word>
+      <Word>mat4x3</Word>
+      <Word>mat4x4</Word>
+      <Word>double</Word>
+      <Word>string</Word>
+    </Keywords>
+
+    <Keywords color = "IntrinsicFunctions">
+      <Word>matrixCompMult</Word>
+      <Word>abs</Word>
+      <Word>acos</Word>
+      <Word>all</Word>
+      <Word>any</Word>
+      <Word>asdouble</Word>
+      <Word>asfloat</Word>
+      <Word>asin</Word>
+      <Word>asint</Word>
+      <Word>asuint</Word>
+      <Word>atan</Word>
+      <Word>atan2</Word>
+      <Word>ceil</Word>
+      <Word>clamp</Word>
+      <Word>clip</Word>
+      <Word>cos</Word>
+      <Word>cosh</Word>
+      <Word>countbits</Word>
+      <Word>cross</Word>
+      <Word>dFdx</Word>
+      <Word>dFdy</Word>
+      <Word>degrees</Word>
+      <Word>determinant</Word>
+      <Word>distance</Word>
+      <Word>dot</Word>
+      <Word>dst</Word>
+      <Word>errorf</Word>
+      <Word>exp</Word>
+      <Word>exp2</Word>
+      <Word>f16tof32</Word>
+      <Word>f32tof16</Word>
+      <Word>faceforward</Word>
+      <Word>firstbithigh</Word>
+      <Word>firstbitlow</Word>
+      <Word>floor</Word>
+      <Word>fract</Word>
+      <Word>frexp</Word>
+      <Word>fwidth</Word>
+      <Word>isfinite</Word>
+      <Word>isinf</Word>
+      <Word>isnan</Word>
+      <Word>ldexp</Word>
+      <Word>length</Word>
+      <Word>mix</Word>
+      <Word>lit</Word>
+      <Word>log</Word>
+      <Word>log10</Word>
+      <Word>log2</Word>
+      <Word>mad</Word>
+      <Word>max</Word>
+      <Word>min</Word>
+      <Word>modf</Word>
+      <Word>mul</Word>
+      <Word>noise</Word>
+      <Word>noise1</Word>
+      <Word>noise2</Word>
+      <Word>noise3</Word>
+      <Word>noise4</Word>
+      <Word>normalize</Word>
+      <Word>pow</Word>
+      <Word>printf</Word>
+      <Word>inversesqrt</Word>
+      <Word>radians</Word>
+      <Word>Rcp</Word>
+      <Word>reflect</Word>
+      <Word>refract</Word>
+      <Word>reversebits</Word>
+      <Word>round</Word>
+      <Word>rsqrt</Word>
+      <Word>saturate</Word>
+      <Word>sign</Word>
+      <Word>sin</Word>
+      <Word>sincos</Word>
+      <Word>sinh</Word>
+      <Word>smoothstep</Word>
+      <Word>sqrt</Word>
+      <Word>step</Word>
+      <Word>tan</Word>
+      <Word>tanh</Word>
+      <Word>texture1D</Word>
+      <Word>texture2D</Word>
+      <Word>texture3D</Word>
+      <Word>textureCube</Word>
+      <Word>transpose</Word>
+      <Word>trunc</Word>
+      <Word>outerProduct</Word>
+      <Word>roundEven</Word>
+      <Word>asinh</Word>
+      <Word>acosh</Word>
+      <Word>atanh</Word>
+      <Word>textureSize</Word>
+    </Keywords>
+
+    <Span color="Preprocessor">
+      <Begin>\#</Begin>
+    </Span>
+
+    <Span color="Comment">
+      <Begin>//</Begin>
+    </Span>
+
+    <Span color="Comment" multiline="true">
+      <Begin>/\*</Begin>
+      <End>\*/</End>
+    </Span>
+
+    <Span color="String">
+      <Begin>"</Begin>
+      <End>"</End>
+      <RuleSet>
+        <Span begin="\\" end="." />
+      </RuleSet>
+    </Span>
+
+    <Span color="Character">
+      <Begin>'</Begin>
+      <End>'</End>
+      <RuleSet>
+        <Span begin="\\" end="." />
+      </RuleSet>
+    </Span>
+
+    <Rule color="MethodName">[\d\w_]+(?=(\s*\())</Rule>
+    <Rule color="Digits">\b0[xX][0-9a-fA-F]+|(\b\d+(\.[0-9]+)?|\.[0-9]+)([eE][+-]?[0-9]+)?</Rule>
+
+  </RuleSet>
+</SyntaxDefinition>

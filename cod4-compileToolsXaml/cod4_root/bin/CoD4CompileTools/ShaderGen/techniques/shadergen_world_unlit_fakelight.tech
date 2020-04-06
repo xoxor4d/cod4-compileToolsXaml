@@ -1,0 +1,17 @@
+{
+	stateMap "default";
+
+	vertexShader 3.0 "SHADER_NAME"
+	{
+	}
+
+	pixelShader 3.0 "SHADER_NAME"
+	{
+		colorMapSampler = material.colorMap;
+	}
+
+	vertex.position = code.position;
+	vertex.normal = code.normal;
+	vertex.color[0] = code.color;
+	vertex.texcoord[0] = code.texcoord[0];
+}

@@ -1,0 +1,31 @@
+﻿<Window x:Class="cod4_compileToolsXaml.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cod4_compileToolsXaml"
+        mc:Ignorable="d"
+        Title=" Settings" Height="210.5" Width="400" MinHeight="200" MinWidth="400" WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize" WindowStyle="ToolWindow" Loaded="Window_Loaded">
+    <Grid Background="#FF2B2B2B">
+        <Label Content="Modtools Path:" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Height="27" Width="90" Background="{x:Null}" Foreground="#FF787878"/>
+        <TextBox Style="{StaticResource TextBox}" Template="{DynamicResource TextBoxNew}" x:Name="txtTreePath" HorizontalAlignment="Stretch" Height="24" Margin="10,34,43,0" TextWrapping="NoWrap" Text="Your CoD4 Modtools path" VerticalAlignment="Top" AutomationProperties.IsRowHeader="True" SelectionBrush="#FF515151"/>
+
+        <!-- Refresh -->
+        <Button Style="{StaticResource ToolButton}" HorizontalAlignment="Right" VerticalAlignment="Top" ToolTip="Browse for CoD4 Root Dir" Margin="0,34,10,0" Click="BrowseCoD4Click" Width="26" Height="24" >
+            <Canvas Height="18" Width="20" >
+                <Rectangle Fill="White" Height="2" StrokeThickness="0" Width="20" Canvas.Top="2" Opacity="0.5"/>
+                <Rectangle Fill="White" Height="2" StrokeThickness="0" Width="20" Margin="0,0,0,0" Canvas.Top="8" Opacity="0.5"/>
+                <Rectangle Fill="White" Height="2" StrokeThickness="0" Width="20" Margin="0,0,0,0" Canvas.Top="14" Opacity="0.5"/>
+            </Canvas>
+        </Button>
+
+        <Label x:Name="txtLanguage" Content="default" HorizontalAlignment="Right" Margin="0,6,6,0" VerticalAlignment="Top" Height="28" Width="186" Background="{x:Null}" Foreground="#FF747474" HorizontalContentAlignment="Right" FontSize="11" Padding="5,6,5,5"/>
+        <CheckBox Style="{StaticResource CheckBox}" Template="{DynamicResource CheckBoxNew}" x:Name="copy_mapToUsermaps" Content="Copy map to usermaps-folder when building FastFiles" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Checked="Copy_mapToUsermaps_Changed" Unchecked="Copy_mapToUsermaps_Changed" Width="374"/>
+        <TextBox Style="{StaticResource TextBox}" Template="{DynamicResource TextBoxNew}" x:Name="txtExeRadiant" HorizontalAlignment="Stretch" Height="24" Margin="168,0,10,12" TextWrapping="NoWrap" VerticalAlignment="Bottom" AutomationProperties.IsRowHeader="True" SelectionBrush="#FF515151" TextChanged="TxtExeRadiant_TextChanged"/>
+        <Label Content="Radiant Executable Name:" HorizontalAlignment="Left" Margin="0,0,0,10" VerticalAlignment="Bottom" Height="28" Width="163" Background="{x:Null}" Foreground="#FF787878" HorizontalContentAlignment="Right"/>
+        <TextBox Style="{StaticResource TextBox}" Template="{DynamicResource TextBoxNew}" x:Name="txtExeCoD4Mp" HorizontalAlignment="Stretch" Height="24" Margin="168,0,10,45" TextWrapping="NoWrap" VerticalAlignment="Bottom" AutomationProperties.IsRowHeader="True" SelectionBrush="#FF515151" TextChanged="txtExeCoD4Mp_TextChanged"/>
+        <Label Content="CoD4MP Executable Name:" HorizontalAlignment="Left" Margin="0,0,0,43" VerticalAlignment="Bottom" Height="28" Width="163" Background="{x:Null}" Foreground="#FF787878" HorizontalContentAlignment="Right"/>
+        <!--<Image Margin="10,19,294,64" Source="" Stretch="Fill"/> -->
+    </Grid>
+</Window>

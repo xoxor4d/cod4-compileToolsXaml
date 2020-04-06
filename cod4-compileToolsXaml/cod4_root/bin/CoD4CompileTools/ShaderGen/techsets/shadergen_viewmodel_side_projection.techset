@@ -1,0 +1,50 @@
+// # [shadergen_viewmodel_phong.template]
+
+"fakelight normal":
+	fakelight_normal_dtex;
+
+"fakelight view":
+	fakelight_view_dtex;
+
+"case texture":
+	case_texture_dtex;
+
+"shaded wireframe":
+	wireframe_shaded_dtex;
+
+"solid wireframe":
+	wireframe_solid_dtex;
+
+"depth prepass":
+	zprepass;
+
+"build shadowmap depth":
+	build_shadowmap_model;
+
+"build shadowmap color":
+	build_shadowmap_color_dtex_sm2;
+
+"build floatz":
+	build_floatz_dtex;
+
+"unlit":
+"lit":
+"lit sun":
+"lit sun shadow":
+"lit spot":
+"lit spot shadow":
+"lit omni":
+"lit omni shadow":
+"light omni":
+"light spot":
+"light spot shadow":
+	SHADER_NAME;
+
+"sunlight preview":
+	sunpre_r0c0_dtex;
+
+"shadowcookie caster":
+	shadowcookie_caster_dtex;
+
+"shadowcookie receiver":
+	shadowcookie_receiver_dtex;

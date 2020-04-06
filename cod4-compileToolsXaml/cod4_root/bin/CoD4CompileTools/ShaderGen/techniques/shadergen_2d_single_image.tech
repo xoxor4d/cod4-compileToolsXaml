@@ -1,0 +1,15 @@
+{
+	stateMap "default2d";
+
+	vertexShader 3.0 "SHADER_NAME"
+	{
+	}
+
+	pixelShader 3.0 "SHADER_NAME"
+	{
+		colorMapSampler = material.colorMap; // assetmanager colorMap
+	}
+
+	vertex.position = code.position;
+	vertex.texcoord[0] = code.texcoord[0];
+}

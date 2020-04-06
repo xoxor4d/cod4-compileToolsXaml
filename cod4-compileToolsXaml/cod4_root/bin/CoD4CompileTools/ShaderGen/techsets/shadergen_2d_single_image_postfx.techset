@@ -1,0 +1,4 @@
+// # [shadergen_2d_single_image_postfx.template]
+
+"unlit":
+	SHADER_NAME;
