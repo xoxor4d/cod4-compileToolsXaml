@@ -12,10 +12,10 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        
+
         <!-- Side Bar Rectangle -->
         <Rectangle Fill="#FF2B2B2B" HorizontalAlignment="Left" Width="47" Margin="0,0,0,26"/>
-        
+
         <!-- Radiant Button -->
         <Button Style="{StaticResource SidebarButton}" HorizontalAlignment="Left" Click="RadiantClick" VerticalAlignment="Top" Margin="0,1,0,0" Width="47" Height="47" ToolTip="Radiant">
             <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
@@ -27,7 +27,7 @@
                 </Canvas>
             </Viewbox>
         </Button>
-        
+
         <!-- AssetManager Button -->
         <Button Style="{StaticResource SidebarButton}" HorizontalAlignment="Left" Click="AssetManagerClick" VerticalAlignment="Top" Margin="0,48,0,0" Width="47" Height="47" ToolTip="Asset Manager">
             <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
@@ -39,7 +39,7 @@
                 </Canvas>
             </Viewbox>
         </Button>
-        
+
         <!-- FxEd Button -->
         <Button Style="{StaticResource SidebarButton}" HorizontalAlignment="Left" Click="FxEdClick" VerticalAlignment="Top" Margin="0,95,0,0" Width="47" Height="47" ToolTip="Fx Editor">
             <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
@@ -51,7 +51,7 @@
                 </Canvas>
             </Viewbox>
         </Button>
-        
+
         <!-- Converter Button -->
         <Button Style="{StaticResource SidebarButton}" HorizontalAlignment="Left" Click="ConverterClick" VerticalAlignment="Top" Margin="-61,95,0,0" Width="47" Height="47" ToolTip="Converter (Convert all Assets)">
             <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
@@ -63,7 +63,7 @@
                 </Canvas>
             </Viewbox>
         </Button>
-        
+
         <!-- ShaderGen Button -->
         <Button Style="{StaticResource SidebarButton}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,121" Width="47" Height="47" ToolTip="Shader Generator" Click="ShaderGenClick" BorderBrush="{x:Null}">
             <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
@@ -75,7 +75,7 @@
                 </Canvas>
             </Viewbox>
         </Button>
-        
+
         <!-- Settings Button -->
         <Button Style="{StaticResource SidebarButton}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,74" Width="47" Height="47" ToolTip="Tool Settings" Click="SettingsClick">
             <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
@@ -87,7 +87,7 @@
                 </Canvas>
             </Viewbox>
         </Button>
-        
+
         <!-- About Button -->
         <Button Style="{StaticResource SidebarButton}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,26" Width="47" Height="47" ToolTip="About" Click="AboutClick">
             <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
@@ -99,7 +99,7 @@
                 </Canvas>
             </Viewbox>
         </Button>
-        
+
         <!-- Map Selection -->
         <Label Content="Map Selection:" HorizontalAlignment="Left" Margin="58,10,0,0" VerticalAlignment="Top" Height="26" Width="88" Foreground="Gray"/>
         <ComboBox Style="{StaticResource ComboBox}" ItemContainerStyle="{DynamicResource ComboBoxItemStyle}" Template="{DynamicResource ComboBoxControlNew}" 
@@ -193,11 +193,11 @@
                 <FlowDocument LineHeight="1" TextAlignment="Center"/>
             </RichTextBox>
         </Grid>
-        
+
         <!-- Bottom Bar -->
         <Rectangle Fill="#FF2B2B2B" VerticalAlignment="Bottom" Height="26" Width="auto"/>
-        <Label x:Name="LauncherProcessTimeLabel"  Content="Time elapsed:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="439,0,0,1" Height="26" Width="82" Foreground="Gray"/>
-        <Label x:Name="LauncherProcessTimeElapsedTextBox" Content="00:00:00" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="526,0,0,1" Height="26" Width="96" Foreground="Gray"/>
+        <Label x:Name="LauncherProcessTimeLabel"  Content="Time elapsed:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="439,0,0,0.143" Height="26" Width="82" Foreground="Gray"/>
+        <Label x:Name="LauncherProcessTimeElapsedTextBox" Content="00:00:00" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="526,0,0,0.143" Height="26" Width="96" Foreground="Gray"/>
         <Button Style="{StaticResource ToolButton}" x:Name="CancelCompilerButton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="{x:Null}" ToolTip="Cancel Current Compiler" Margin="0,0,0,1" Width="26" Height="24" BorderBrush="{x:Null}" Click="CancelCompiler_Click" IsEnabled="False">
             <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
                 <Canvas Canvas.Left="0" Canvas.Top="0" Width="58.064" Height="58.064">
@@ -209,9 +209,11 @@
             </Viewbox>
         </Button>
         <Label x:Name="label_cmpStatus"  Content="" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,31,1" Height="26" Width="253" HorizontalContentAlignment="Right" Foreground="Gray"/>
-        
+
         <!-- Dim Box for when dialogs are active -->
         <Rectangle x:Name="DimBox" Fill="#82000000" Visibility="Hidden"/>
+        <Label x:Name="LastProcessTimeLabel"  Content="Last Build:" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,0.143" Height="26" Width="65" Foreground="Gray"/>
+        <Label x:Name="LastProcessTimeElapsedTextBox" Content="" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="65,0,0,0.143" Height="26" Width="96" Foreground="Gray"/>
 
     </Grid>
 </Window>
