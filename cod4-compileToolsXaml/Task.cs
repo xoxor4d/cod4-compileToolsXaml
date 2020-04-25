@@ -270,6 +270,7 @@ namespace cod4_compileToolsXaml
                 {
                     CancelCompilerButton.IsEnabled = false;
                     CancelCompilerButtonImage.Source = new BitmapImage(new Uri(@"/Resources/checked.png", UriKind.Relative));
+                    LastProcessTimeElapsedTextBox.Content = DateTime.Now.ToString("HH:mm:ss tt");
                     label_cmpStatus.Content = "DONE";
                 }));
             }
