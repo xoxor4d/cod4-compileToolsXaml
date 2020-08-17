@@ -72,7 +72,7 @@ namespace cod4_compileToolsXaml
 
         private void RadiantClick(object sender, RoutedEventArgs e)
         {
-            if (Variables.strRadiantName != "")
+            if (Variables.strRadiantName != "" && Variables.strRadiantName.EndsWith(".exe"))
             {
                 runProcess(Variables.strBinPath + Variables.strRadiantName, Variables.strBinPath, "");
             } 

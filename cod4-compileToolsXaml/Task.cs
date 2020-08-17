@@ -46,7 +46,8 @@ namespace cod4_compileToolsXaml
                 return false;
             }
 
-            WriteConsole("Compiling Shader ....");
+            WriteConsole("\nCompiling Shader ....");
+            WriteConsole("CONSOLESTATUS:COMPILE SHADER");
 
             Task_FinishedPrints = false;
             TaskActive = true;

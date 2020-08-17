@@ -20,11 +20,11 @@ namespace cod4_compileToolsXaml
 
             if (!loadUserSettings())
             {
-                Variables.strGameMpName = "iw3mp.exe";
-                Variables.strRadiantName = "CoD4Radiant.exe";
-
                 LoadDefaultUserSettings();
                 fillMapList();
+
+                Variables.strGameMpName = "iw3mp.exe";
+                Variables.strRadiantName = "CoD4Radiant.exe";
             }
 
             setLanguage();

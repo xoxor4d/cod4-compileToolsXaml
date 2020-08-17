@@ -74,7 +74,7 @@ namespace cod4_compileToolsXaml
             }
                 
 
-            if (Variables.strRadiantName != "")
+            if (Variables.strRadiantName != "" && Variables.strRadiantName.EndsWith(".exe"))
             {
                 txtExeRadiant.Text = Variables.strRadiantName;
             }
