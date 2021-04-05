@@ -1,5 +1,12 @@
 ## cod4-compileToolsXaml - Custom CoD4-CompileTools build with .NET Framework 4.6.1
-This project is based on the stock compileTools and includes various modifications/additions.  
+
+<p float="left">
+  <img src="https://xoxor4d.github.io/assets/img/compileTools/prev01.jpg" width="48%" />
+  <img src="https://xoxor4d.github.io/assets/img/compileTools/prev02.jpg" width="48%" align="right" /> 
+</p>
+
+This project is based on the stock compileTools and includes various modifications/additions.
+Visit the project page for more information.
 
 #### Building the project:
 1. Clone or download otherwise
